@@ -1,0 +1,259 @@
+body {
+    background-color: #212121;
+    color:#fff;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+nav {
+    display: flex;
+    flex-direction: flex-start;
+    border-bottom:1px solid;
+    background:#efefef;
+}
+
+h1 {
+    text-align:center;
+    font-size:1.8rem;
+}
+
+h3 {
+    font-size:1.3rem;
+    padding:10px 0 4px;
+}
+input, textarea {
+    border-radius: 4px;
+    padding:4px;
+    font-size:1.1rem;
+    border:1px solid #efefef;
+    background-color: #fff;
+}
+
+textarea {
+    resize:none;
+}
+
+button {
+    padding:4px;
+    font-size:1.1rem;
+}
+
+label {
+    display: block;
+    font-weight:bold;
+}
+
+fieldset {
+    padding:20px 10px;
+    border:1px solid #efefef;
+    display: inline-block;
+    border-radius: 4px;
+    background-color: black;
+}
+
+p {
+    padding:10px;
+    width:300px;
+    margin:4px;
+    font-size:1.1rem;
+}
+
+.clickable {
+    cursor:pointer;
+}
+
+.hidden {
+    display: none;
+}
+
+.nav-element {
+    padding:30px 10px 4px;
+    border-right:1px #212121 solid;
+    border-left:1px solid #fff;
+    font-size:1.5rem;
+    cursor:pointer;
+    font-weight:bold;
+    color:#111;
+}
+
+.nav-element:hover {
+    background-color: #fff;
+}
+
+.nav-element.active {
+    padding: 31px 10px 4px;
+    position: relative;
+    top:1px;
+    background-color: #212121;
+    color:#efefef;
+}
+
+.footer {
+    width:100%;
+    padding:20px 0 0 0;
+    border-top:1px solid;
+    margin:20px 0 4px;
+    text-align: center;
+}
+
+.icon-container {
+    padding:6px;
+    border-radius: 4px;
+    box-shadow: 3px 3px 2px #100;
+    background-color: #efefef;
+    display: inline-block;
+    margin:6px;
+    border:1px solid #efefef;
+}
+
+@keyframes bubble {
+    from {
+        box-shadow: 3px 3px 2px #100;
+        border:1px solid #efefef;
+    }
+
+    20% {
+        box-shadow: 1px 1px 2px  #100;
+        border: 1px solid #100;
+    }
+
+    50% {
+        box-shadow: 4px 4px 6px  #100;
+        border:1px solid #efefef;
+    }
+
+    to {
+        box-shadow: 1px 1px 2px  #100;
+        border: 1px solid #100;
+    }
+}
+
+.icon-container.clickable:hover {
+    animation-duration: .5s;
+    animation-name: bubble;
+    box-shadow: 1px 1px 2px  #100;
+    border:1px solid #100;
+}
+
+.icon-container.selected {
+    border:3px solid #78ff4f;
+    padding:4px;
+}
+
+.icon-container.selected:hover {
+    border:3px solid #78ff4f;
+    padding:4px;
+}
+
+.icon-container svg {
+    width:32px;
+    height:32px;
+}
+
+.icons-container {
+    padding:10px 0;
+}
+
+.icons {
+    display:flex;
+    width:300px;
+    justify-content: center;
+    flex-wrap:wrap;
+}
+
+.create-deck-form .name,.create-deck-form .description {
+    width:300px;
+}
+.create-deck-form .description {
+    height:75px;
+}
+.decks-list {
+    padding:10px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.deck {
+    display: inline-block;
+    background-color: black;
+    border-radius:4px;
+    border:1px solid #efefef;
+    width:300px;
+    padding:10px 2px;
+    margin:4px;
+    box-shadow: 3px 3px 4px #100;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+
+.deck .deck-name {
+    display: block;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size:1.1em;
+    border-bottom:1px solid;
+    padding:2px 2px 0 4px;
+    
+}
+
+.deck .deck-description {
+    padding:4px 4px 8px;
+    height:54px;
+    overflow:hidden;
+}
+
+.deck-additional {
+    display: flex;
+    padding:4px 2px;
+}
+
+.deck-details {
+    padding:4px;
+}
+
+.deck-cards-count {
+    padding:10px 0 0 0;
+    font-weight:bold;
+}
+
+.card-count-number {
+    color:#78ff4f;
+}
+
+.search-result {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.search-result .mtg-card {
+    width:150px;
+    margin:10px;
+    cursor:pointer;
+}
+
+.mtg-card img {
+    width:100%;
+}
+
+.no-image-warning {
+    font-weight:bold;
+    color:red;
+    position: relative;
+    top:-50px;
+    text-align: center;
+    background-color: rgba(30,30,30, 0.7);
+}
+
+.deck-cards-list {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.deck-cards-list .mtg-card{ 
+    width:150px;
+    margin:10px;
+
+}
